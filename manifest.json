@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "FA Test",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com  https://127.0.0.1:8000/; object-src 'self'",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://*.wikipedia.org/*"
+        ],
+        "js": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+          "./content.js"
+        ]
+      }
+    ],
+    "permissions": [
+      "activeTab"
+    ]
+  }
